@@ -1,4 +1,167 @@
-.navbar .navbar-brand img{
-    width: 320px;
-    height: 60px;
+/* Custom Orange & White Theme */
+
+/* Navbar Logo */
+.navbar .navbar-brand img {
+  max-width: 200px;
+  height: auto;
+}
+
+@media (max-width: 767.98px) {
+  .navbar-collapse {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+  color: #f97316 !important;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #fff !important;
+  background-color: #f97316 !important;
+  border-radius: 5px;
+}
+
+/* Right-side buttons */
+.btn-primary {
+  background-color: #f97316;
+  border-color: #f97316;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #d65b12;
+  border-color: #d65b12;
+}
+
+.btn-outline-primary {
+  border-color: #f97316;
+  color: #f97316;
+}
+
+.btn-outline-primary:hover {
+  background-color: #f97316;
+  color: #fff;
+}
+
+/* Banner */
+.banner-images img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+}
+
+.banner-bg {
+  background-image: url('https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+}
+
+.banner-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.banner-bg .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Brand Carousel */
+.brand-logo-marquee .owl-carousel .owl-nav {
+  font-size: 75px;
+  color: #f97316;
+}
+
+.brand-logo-marquee .owl-carousel .owl-nav .owl-prev:hover,
+.brand-logo-marquee .owl-carousel .owl-nav .owl-next:hover {
+  background-color: transparent;
+  color: #d65b12;
+}
+
+/* Tabs */
+.nav-pills .nav-link {
+  color: #f97316;
+  border: 1px solid #f97316;
+}
+
+.nav-pills .nav-link.active {
+  background-color: #f97316;
+  color: white;
+}
+
+/* Responsive Tabs */
+@media (max-width: 768px) {
+  #featureTabs {
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  #featureTabs .nav-item {
+    flex: 0 0 auto;
+  }
+}
+
+/* Tab Pane Images */
+.tab-pane img {
+  max-width: 300px;
+  max-height: 400px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Feature Icons Color */
+.bi {
+  color: #f97316;
+}
+
+/* Cards and Icons */
+.card .bi,
+.text-orange {
+  color: #f97316 !important;
+}
+
+.bg-orange {
+  background-color: #f97316 !important;
+  color: #fff !important;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #f97316;
+  border-radius: 50%;
+}
+
+/* Section Headings and Buttons */
+section h2,
+section h3,
+section h4,
+section h5 {
+  color: #f97316;
+}
+
+section .btn {
+  border-radius: 4px;
+}
+
+/* Links */
+a {
+  color: #f97316;
+}
+
+a:hover {
+  color: #d65b12;
 }

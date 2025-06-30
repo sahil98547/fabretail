@@ -2,97 +2,484 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fab-Retail</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" target="_blank" href="https://www.fabretail.in/onboarding-2/"><img src="./Logo.png"
-                    alt=""></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="./Logo.png" alt="Logo" class="img-fluid d-inline-block" style="max-width: 200px;" />
+            </a>
+
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <!-- Nav Items -->
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item dropdown ps-3">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Features
-                        </a>
+                    <li class="nav-item dropdown px-lg-3">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Features</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Social-listening</a></li>
                             <li><a class="dropdown-item" href="#">Case-Studies</a></li>
                             <li><a class="dropdown-item" href="#">Careers</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item dropdown px-2">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Learn
-                        </a>
+
+                    <li class="nav-item dropdown px-lg-3">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Learn</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Blogs</a></li>
                             <li><a class="dropdown-item" href="#">Developers</a></li>
                             <li><a class="dropdown-item" href="#">Content Creations</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
+
+                    <li class="nav-item px-lg-3">
                         <a class="nav-link" href="#">Pricing</a>
                     </li>
                 </ul>
-                <form class="d-flex align-items-center" role="search">
-                    <div class="button-right-header-login login-button me-2 px-4 py-2 ">Login</div>
-                    <button class="btn btn-outline-primary px-4 py-2" type="submit">Start Free Trial</button>
-                    <button class="btn btn-primary ms-4 px-4 py-2" type="submit">Book A Demo</button>
-                </form>
+
+                <!-- Right-side Buttons -->
+                <!-- Right-side Buttons -->
+                <div
+                    class="w-100 w-lg-auto d-flex flex-column flex-lg-row align-items-center justify-content-end gap-2 pt-3 pt-lg-0">
+                    <div class="fw-medium" style="color: #fd7e14;">Login</div>
+                    <button class="btn btn-outline-primary px-4 py-2">Start Free Trial</button>
+                    <button class="btn btn-primary px-4 py-2">Book A Demo</button>
+                </div>
+
             </div>
         </div>
     </nav>
 
-    <section class="bg-light py-5 text-center">
+
+    <!-- Main Banner -->
+    <section class="py-5 text-center main-banner-section banner-bg">
         <div class="container">
-            <h1 class="fw-bold display-5">
+            <h1 class="fw-bold display-5 mb-4 text-white">
                 Omni-From Tickets to Analytics: The Complete CX Solution for your business
             </h1>
-            <p class="lead mt-3">
+            <p class="lead mt-3 mx-auto w-50 text-white w-100">
                 Unlock the Power of Consolidated Ticket Management and Analytics to Drive Customer Care and Marketing
                 Success
             </p>
-            <div class="d-flex justify-content-center gap-3 mt-4 flex-wrap">
-                <a href="#" class="btn btn-primary px-4">
+            <div class="d-flex justify-content-center gap-3 mt-4 flex-wrap py-2">
+                <a href="#" class="btn btn-primary px-4 py-2 px-5">
                     Book a Demo <i class="bi bi-arrow-up-right ms-2"></i>
                 </a>
-                <a href="#" class="btn btn-light border px-4">
+                <a href="#" class="btn btn-light border px-5 py-2">
                     Watch Video <i class="bi bi-play-fill ms-2"></i>
                 </a>
+            </div>
+
+            <div class="row mt-5 banner-images">
+                <div class="col-12 col-md-4 mb-4 mb-md-0">
+                    <img src="./images/Social-guide.webp" class="img-fluid" alt="Social-guide" />
+                </div>
+                <div class="col-12 col-md-4 mb-4 mb-md-0">
+                    <img src="./images/buzzTrend.webp" class="img-fluid" alt="buzzTrend" />
+                </div>
+                <div class="col-12 col-md-4">
+                    <img src="./images/omni-channel.webp" class="img-fluid" alt="omni-channel" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Logo Marquee -->
+
+    <section class="py-5 text-center bg-light brand-logo-marquee">
+        <div class="container">
+            <h2 class="fw-bold mb-5">Trusted by Leading Brands Worldwide</h2>
+
+            <div class="owl-carousel owl-theme brand-carousel" id="brand-carousel">
+                <div><img src="./images/fabweddings.png" class="brand-logo" /></div>
+                <div><img src="./images/step1.png" class="brand-logo" /></div>
+                <div><img src="./images/push-logo.png" class="brand-logo" /></div>
+                <div><img src="./images/fabweddings.png" class="brand-logo" /></div>
+                <div><img src="./images/step1.png" class="brand-logo" /></div>
+                <div><img src="./images/push-logo.png" class="brand-logo" /></div>
+                <div><img src="./images/fabweddings.png" class="brand-logo" /></div>
+                <div><img src="./images/step1.png" class="brand-logo" /></div>
+                <div><img src="./images/push-logo.png" class="brand-logo" /></div>
+                <div><img src="./images/fabweddings.png" class="brand-logo" /></div>
+                <div><img src="./images/step1.png" class="brand-logo" /></div>
+                <div><img src="./images/push-logo.png" class="brand-logo" /></div>
+                <div><img src="./images/fabweddings.png" class="brand-logo" /></div>
+                <div><img src="./images/step1.png" class="brand-logo" /></div>
+                <div><img src="./images/fabweddings.png" class="brand-logo" /></div>
+                <div><img src="./images/step1.png" class="brand-logo" /></div>
             </div>
         </div>
     </section>
 
 
 
+    <!-- Bootstrap 5 Tabs & Responsive Slider Section -->
+    <section class="py-5 bg-dark text-white">
+        <div class="container">
+            <!-- Tabs -->
+            <ul class="nav nav-pills justify-content-start mb-4 gap-2 flex-nowrap" id="featureTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="ticketing-tab" data-bs-toggle="pill" data-bs-target="#ticketing"
+                        type="button" role="tab">Omni-Channel Ticketing</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="listening-tab" data-bs-toggle="pill" data-bs-target="#listening"
+                        type="button" role="tab">Social Listening</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="ai-tab" data-bs-toggle="pill" data-bs-target="#ai" type="button"
+                        role="tab">Social CRM</button>
+                </li>
+            </ul>
+
+            <!-- Tab Content -->
+            <div class="tab-content" id="featureTabsContent">
+
+                <!-- Tab 1 -->
+                <div class="tab-pane fade show active" id="ticketing" role="tabpanel">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4 text-lg-start text-center">
+                            <h4 class="fw-bold">Evaluate Smarter</h4>
+                            <p>Measure agent performance with detailed forms and ticket insights.</p>
+                            <h5 class="fw-bold">Easy Setup</h5>
+                            <p>Create and customize QA forms effortlessly with built-in templates.</p>
+                        </div>
+                        <div class="col-lg-4 text-center my-4 my-lg-0">
+                            <img src="./images/graph.png" alt="Assessment UI" class="img-fluid rounded shadow">
+                        </div>
+                        <div class="col-lg-4 text-lg-start text-center">
+                            <h4 class="fw-bold">Actionable Feedback</h4>
+                            <p>Turn evaluations into coaching moments for real improvement.</p>
+                            <h5 class="fw-bold">Insightful Reports</h5>
+                            <p>Track QA and agent performance with powerful analytics.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 2 -->
+                <div class="tab-pane fade" id="listening" role="tabpanel">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4 text-lg-start text-center">
+                            <h4 class="fw-bold">Understand Trends</h4>
+                            <p>Listen to customer voices across platforms in real-time.</p>
+                            <h5 class="fw-bold">Smart Segmentation</h5>
+                            <p>Filter by sentiment, topic, and location with ease.</p>
+                        </div>
+                        <div class="col-lg-4 text-center my-4 my-lg-0">
+                            <img src="./images/soical-listening.jpg" alt="Listening UI"
+                                class="img-fluid rounded shadow">
+                        </div>
+                        <div class="col-lg-4 text-lg-start text-center">
+                            <h4 class="fw-bold">Real-Time Alerts</h4>
+                            <p>Get notified of spikes and issues as they happen.</p>
+                            <h5 class="fw-bold">Insightful Metrics</h5>
+                            <p>Track brand sentiment and public perception in one place.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 3 -->
+                <div class="tab-pane fade" id="ai" role="tabpanel">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4 text-lg-start text-center">
+                            <h4 class="fw-bold">AI-Powered Responses</h4>
+                            <p>Use AI to draft replies and reduce handling time.</p>
+                            <h5 class="fw-bold">Agent Assist</h5>
+                            <p>Give your team smart suggestions in real-time.</p>
+                        </div>
+                        <div class="col-lg-4 text-center my-4 my-lg-0">
+                            <img src="./images/social-CRM.jpg" alt="AI Feature UI" class="img-fluid rounded shadow">
+                        </div>
+                        <div class="col-lg-4 text-lg-start text-center">
+                            <h4 class="fw-bold">Predictive Insights</h4>
+                            <p>Forecast trends and optimize support strategy.</p>
+                            <h5 class="fw-bold">Conversation Summaries</h5>
+                            <p>Instant overviews of what happened and what to do next.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
 
 
+    <section class="py-5 bg-light">
+        <div class="container">
+
+            <!-- Title and Description Row -->
+            <div class="row align-items-center mb-5">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <h2 class="fw-bold">A Complete Social Suite (All in One)</h2>
+                </div>
+                <div class="col-md-6 text-start">
+                    <p class="mb-3">
+                        A comprehensive social suite that integrates social listening, publishing, analytics, and
+                        engagement tools, enabling brands to optimize customer interactions and drive meaningful growth
+                    </p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="row g-4">
+                <!-- Social Listening -->
+                <div class="col-12 col-md-6">
+                    <div class="p-4 bg-white rounded shadow h-100">
+                        <div class="d-flex align-items-start mb-3">
+                            <i class="bi bi-ear me-3 fs-3 text-primary"></i>
+                            <h5 class="fw-bold mt-2">Social Listening</h5>
+                        </div>
+                        <p>
+                            Fab-Retail Social Listening tracks brand mentions, analyzes sentiment, and uncovers
+                            trends, helping you engage proactively, manage reputation, and gain actionable insights for
+                            smarter decision-making.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Social Care -->
+                <div class="col-12 col-md-6">
+                    <div class="p-4 bg-white rounded shadow h-100">
+                        <div class="d-flex align-items-start mb-3">
+                            <i class="bi bi-chat-dots me-3 fs-3 text-success"></i>
+                            <h5 class="fw-bold mb-0 mt-2">Social Care</h5>
+                        </div>
+                        <p>
+                            Fab-retail Social Care streamlines customer service across social, digital, and voice
+                            channels. It enhances response consistency, boosts productivity through AI, and provides
+                            faster resolutions with seamless omnichannel support.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Social Analytics -->
+                <div class="col-12 col-md-6">
+                    <div class="p-4 bg-white rounded shadow h-100">
+                        <div class="d-flex align-items-start mb-3">
+                            <i class="bi bi-bar-chart-line me-3 fs-3 text-warning"></i>
+                            <h5 class="fw-bold mb-0 mt-2">Social Analytics</h5>
+                        </div>
+                        <p>
+                            AI-driven analytics, content management, and performance reports to optimize social media
+                            strategies with actionable insights, benchmarking, and competitive analysis.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Social Publishing -->
+                <div class="col-12 col-md-6">
+                    <div class="p-4 bg-white rounded shadow h-100">
+                        <div class="d-flex align-items-start mb-3">
+                            <i class="bi bi-share me-3 fs-3 text-danger"></i>
+                            <h5 class="fw-bold mb-0 mt-2">Social Publishing</h5>
+                        </div>
+                        <p>
+                            Fab-retail publishing feature enables scheduling, drafting, and managing posts across
+                            multiple platforms. Post-approval workflows and team collaboration streamline campaigns
+                            efficiently.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Data Coverage -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- Left: Single Image -->
+                <div class="col-12 col-md-6 mb-4 mb-md-0 text-center">
+                    <img src="./images/comprehensive-intelligence.webp" alt="Comprehensive Intelligence"
+                        class="img-fluid rounded shadow" style="max-width: 100%; height: auto;">
+                </div>
+
+                <!-- Right: Text Content -->
+                <div class="col-12 col-md-6">
+                    <h3 class="fw-bold">Never Miss a Beat.</h3>
+                    <p class="text-muted">
+                        Fab-retail offers 100% coverage of public brand data, authenticated private channels,
+                        and competitor public data for comprehensive market insights and strategic decision-making and
+                        Uncover Insights through Stunning Dashboards and All-in-One BI Tools.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
 
+    <!-- Real Stories Section -->
+    <section class="py-5 bg-dark text-white text-center">
+        <div class="container">
+            <h2 class="fw-bold mb-4">Real Stories. Real Success.</h2>
+
+            <div id="videoCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+
+                    <!-- Video Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/hvgm6u_DjUk" title="Video 1" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <!-- Video Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/hvgm6u_DjUk" title="Video 2" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <!-- Add more video slides here if needed -->
+
+                </div>
+
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bg-secondary rounded-circle p-3" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#videoCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon bg-secondary rounded-circle p-3" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
 
 
+    <section class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-4"><span class="text-orange">What Our Clients Say</h2>
+
+            <div id="clientCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card shadow-sm border-0 h-100">
+                                <div class="position-relative">
+                                    <!-- Ensure image path is correct -->
+                                    <img src="./images/bata.png" alt="FitForMe Logo"
+                                        class="rounded-circle position-absolute top-0 start-50 translate-middle"
+                                        style="width: 60px; height: 60px; margin-top: -30px;">
+                                </div>
+                                <div class="card-body pt-5">
+                                    <h5 class="fw-bold mb-1">FitForMe</h5>
+                                    <small class="text-muted">Sylvia Effendi</small>
+                                    <p class="mt-2" id="shortText">As a social media manager overseeing six markets...
+                                    </p>
+                                    <p class="mt-2 d-none" id="fullText">As a social media manager overseeing six
+                                        markets and over 15 channels in Europe, Konnect Insights has been a
+                                        game-changer. The analytics and reporting tools have helped us make informed
+                                        decisions with ease.</p>
+                                    <a href="#" class="text-orange" onclick="toggleReadMore(this); return false;">Read
+                                        more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add more carousel-item blocks if you want additional slides -->
+                </div>
+
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#clientCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bg-orange rounded-circle p-3" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#clientCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon bg-orange rounded-circle p-3" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 
+    <script>
+        $(document).ready(function () {
+            var owl = $('#brand-carousel');
+            owl.owlCarousel({
+                loop: true,
+                margin: 20,
+                nav: true,
+                dots: false,
+                autoplay: true,
+                autoplayTimeout: 1000,
+                autoplaySpeed: 1000,
+                smartSpeed: 3000,
+                slideTransition: 'linear',
+                slideBy: 1,
+                autoplayHoverPause: false,
+                responsive: {
+                    0: { items: 2 },
+                    600: { items: 4 },
+                    1000: { items: 6 }
+                }
+            });
 
+            $('.owl-next').click(function () {
+                owl.trigger('next.owl.carousel');
+            });
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-        crossorigin="anonymous"></script>
+            $('.owl-prev').click(function () {
+                owl.trigger('prev.owl.carousel');
+            });
+        });
+    </script>
+
 </body>
 
 </html>
