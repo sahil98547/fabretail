@@ -33,15 +33,29 @@
             </a>
 
             <!-- Toggler -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler border-0 collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="icon-open">
+                    <!-- Hamburger icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000" viewBox="0 0 16 16">
+                        <path d="M1.5 3h13v1.5h-13zm0 4h13v1.5h-13zm0 4h13v1.5h-13z" />
+                    </svg>
+                </span>
+                <span class="icon-close d-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M3.646 3.646a.5.5 0 0 1 .708 0L8 7.293l3.646-3.647a.5.5 0 1 1 .708.708L8.707 8l3.647 3.646a.5.5 0 0 1-.708.708L8 8.707l-3.646 3.647a.5.5 0 0 1-.708-.708L7.293 8 3.646 4.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </span>
             </button>
 
             <!-- Nav Items -->
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item dropdown px-lg-3">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Features</a>
+                        <a class="nav-link dropdown-toggle text-center" href="#" data-bs-toggle="dropdown">Features</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Social-listening</a></li>
                             <li><a class="dropdown-item" href="#">Case-Studies</a></li>
@@ -50,7 +64,7 @@
                     </li>
 
                     <li class="nav-item dropdown px-lg-3">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Learn</a>
+                        <a class="nav-link dropdown-toggle text-center" href="#" data-bs-toggle="dropdown">Learn</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Blogs</a></li>
                             <li><a class="dropdown-item" href="#">Developers</a></li>
@@ -64,7 +78,7 @@
                 </ul>
 
                 <div
-                    class="w-100 w-lg-auto d-flex flex-column flex-lg-row align-items-center justify-content-end gap-2 pt-3 pt-lg-0">
+                    class="w-100 w-lg-auto d-flex flex-column flex-lg-row align-items-center justify-content-end gap-4 pt-3 pt-lg-0">
                     <div class="fw-medium" style="color: #fd7e14;">Login</div>
                     <button class="btn btn-outline-primary px-4 py-2 rounded-0">Start Free Trial</button>
                     <button class="btn btn-primary px-4 py-2 rounded-0">Book A Demo</button>
@@ -137,22 +151,22 @@
 
 
     <!-- Bootstrap 5 Tabs & Responsive Slider Section -->
-    <section class="py-5 bg-dark text-white omni-channel-slider">
+    <section class="py-5 bg-dark text-white omni-channel-slider mt-5">
         <div class="container">
             <!-- Tabs -->
             <ul class="nav nav-pills justify-content-start mb-4 gap-2 flex-nowrap overflow-auto" id="featureTabs"
                 role="tablist" style="scroll-behavior: smooth; white-space: nowrap;">
 
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="ticketing-tab" data-bs-toggle="pill" data-bs-target="#ticketing"
-                        type="button" role="tab">Omni-Channel Ticketing</button>
+                    <button class="nav-link active" id="ticketing-tab" data-bs-toggle="pill"
+                        data-bs-target="#tab-ticketing" type="button" role="tab">Omni-Channel Ticketing</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="listening-tab" data-bs-toggle="pill" data-bs-target="#listening"
+                    <button class="nav-link" id="listening-tab" data-bs-toggle="pill" data-bs-target="#tab-listening"
                         type="button" role="tab">Social Listening</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="ai-tab" data-bs-toggle="pill" data-bs-target="#ai" type="button"
+                    <button class="nav-link" id="ai-tab" data-bs-toggle="pill" data-bs-target="#tab-ai" type="button"
                         role="tab">Social CRM</button>
                 </li>
             </ul>
@@ -161,7 +175,7 @@
             <div class="tab-content" id="featureTabsContent">
 
                 <!-- Tab 1 -->
-                <div class="tab-pane fade show active" id="ticketing" role="tabpanel">
+                <div class="tab-pane fade show active" id="tab-ticketing" role="tabpanel">
                     <div class="row align-items-center">
                         <div class="col-lg-4 text-lg-start text-center">
                             <h4 class="fw-bold">Evaluate Smarter</h4>
@@ -170,7 +184,8 @@
                             <p>Create and customize QA forms effortlessly with built-in templates.</p>
                         </div>
                         <div class="col-lg-4 text-center my-4 my-lg-0">
-                            <img src="./images/graph.png" alt="Assessment UI" class="img-fluid rounded shadow">
+                            <img src="./images/graph.png" alt="Assessment UI"
+                                class="img-fluid rounded shadow equal-image">
                         </div>
                         <div class="col-lg-4 text-lg-start text-center">
                             <h4 class="fw-bold">Actionable Feedback</h4>
@@ -182,7 +197,7 @@
                 </div>
 
                 <!-- Tab 2 -->
-                <div class="tab-pane fade" id="listening" role="tabpanel">
+                <div class="tab-pane fade" id="tab-listening" role="tabpanel">
                     <div class="row align-items-center">
                         <div class="col-lg-4 text-lg-start text-center">
                             <h4 class="fw-bold">Understand Trends</h4>
@@ -192,7 +207,7 @@
                         </div>
                         <div class="col-lg-4 text-center my-4 my-lg-0">
                             <img src="./images/soical-listening.jpg" alt="Listening UI"
-                                class="img-fluid rounded shadow">
+                                class="img-fluid rounded shadow equal-image">
                         </div>
                         <div class="col-lg-4 text-lg-start text-center">
                             <h4 class="fw-bold">Real-Time Alerts</h4>
@@ -204,7 +219,7 @@
                 </div>
 
                 <!-- Tab 3 -->
-                <div class="tab-pane fade" id="ai" role="tabpanel">
+                <div class="tab-pane fade" id="tab-ai" role="tabpanel">
                     <div class="row align-items-center">
                         <div class="col-lg-4 text-lg-start text-center">
                             <h4 class="fw-bold">AI-Powered Responses</h4>
@@ -213,7 +228,8 @@
                             <p>Give your team smart suggestions in real-time.</p>
                         </div>
                         <div class="col-lg-4 text-center my-4 my-lg-0">
-                            <img src="./images/social-CRM.jpg" alt="AI Feature UI" class="img-fluid rounded shadow">
+                            <img src="./images/social-CRM.jpg" alt="AI Feature UI"
+                                class="img-fluid rounded shadow equal-image">
                         </div>
                         <div class="col-lg-4 text-lg-start text-center">
                             <h4 class="fw-bold">Predictive Insights</h4>
@@ -223,11 +239,12 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
- 
+
     <!-- A Complete Social Suite (All in One) -->
 
     <section class="py-5 bg-light social-suite">
@@ -311,7 +328,6 @@
     </section>
 
 
-
     <!-- Data Coverage -->
     <section class="py-5 bg-light miss-beat">
         <div class="container">
@@ -332,7 +348,6 @@
                         Uncover Insights through Stunning Dashboards and All-in-One BI Tools.
                     </p>
                 </div>
-
             </div>
         </div>
     </section>
@@ -374,19 +389,19 @@
                 <!-- Controls -->
                 <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel"
                     data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon custom-nav-icon" aria-hidden="true"></span>
+                    <span class="custom-nav-icon" aria-hidden="true"><i class="fas fa-chevron-left"></i></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
+
                 <button class="carousel-control-next" type="button" data-bs-target="#videoCarousel"
                     data-bs-slide="next">
-                    <span class="carousel-control-next-icon custom-nav-icon" aria-hidden="true"></span>
+                    <span class="custom-nav-icon" aria-hidden="true"><i class="fas fa-chevron-right"></i></span>
                     <span class="visually-hidden">Next</span>
                 </button>
+
             </div>
         </div>
     </section>
-
-
 
     <section class="py-5 bg-light">
         <div class="container text-center">
@@ -403,13 +418,7 @@
                         <small class="text-muted mb-2 d-block">Sahil Aggarwal</small>
 
                         <p class="testimonial-text short">As a social media manager overseeing six markets and over 15
-                            channels in Europe, Konnect Insights has been a game-changer...</p>
-                        <p class="testimonial-text full d-none">As a social media manager overseeing six markets and
-                            over 15 channels in Europe, Konnect Insights has been a game-changer. The analytics and
-                            reporting tools have helped us make informed decisions with ease.</p>
-
-                        <a href="#" class="text-orange fw-semibold read-toggle"
-                            onclick="toggleReadMore(this); return false;">Read more</a>
+                            channels in Europe, Konnect Insights has been a game-changer.</p>
                     </div>
                 </div>
 
@@ -422,13 +431,7 @@
                         <small class="text-muted mb-2 d-block">Sahil Aggarwal</small>
 
                         <p class="testimonial-text short">As a social media manager overseeing six markets and over 15
-                            channels in Europe, Konnect Insights has been a game-changer...</p>
-                        <p class="testimonial-text full d-none">As a social media manager overseeing six markets and
-                            over 15 channels in Europe, Konnect Insights has been a game-changer. The analytics and
-                            reporting tools have helped us make informed decisions with ease.</p>
-
-                        <a href="#" class="text-orange fw-semibold read-toggle"
-                            onclick="toggleReadMore(this); return false;">Read more</a>
+                            channels in Europe, Konnect Insights has been a game-changer.</p>
                     </div>
                 </div>
 
@@ -441,13 +444,7 @@
                         <small class="text-muted mb-2 d-block">Sahil Aggarwal</small>
 
                         <p class="testimonial-text short">As a social media manager overseeing six markets and over 15
-                            channels in Europe, Konnect Insights has been a game-changer...</p>
-                        <p class="testimonial-text full d-none">As a social media manager overseeing six markets and
-                            over 15 channels in Europe, Konnect Insights has been a game-changer. The analytics and
-                            reporting tools have helped us make informed decisions with ease.</p>
-
-                        <a href="#" class="text-orange fw-semibold read-toggle"
-                            onclick="toggleReadMore(this); return false;">Read more</a>
+                            channels in Europe, Konnect Insights has been a game-changer.</p>
                     </div>
                 </div>
 
@@ -460,13 +457,7 @@
                         <small class="text-muted mb-2 d-block">Sahil Aggarwal</small>
 
                         <p class="testimonial-text short">As a social media manager overseeing six markets and over 15
-                            channels in Europe, Konnect Insights has been a game-changer...</p>
-                        <p class="testimonial-text full d-none">As a social media manager overseeing six markets and
-                            over 15 channels in Europe, Konnect Insights has been a game-changer. The analytics and
-                            reporting tools have helped us make informed decisions with ease.</p>
-
-                        <a href="#" class="text-orange fw-semibold read-toggle"
-                            onclick="toggleReadMore(this); return false;">Read more</a>
+                            channels in Europe, Konnect Insights has been a game-changer.</p>
                     </div>
                 </div>
             </div>
@@ -482,7 +473,7 @@
 
                 <!-- Logo -->
                 <div class="col-md-3 text-center text-md-start">
-                    <img src="./images/VM-Logo-black.png" alt="VM Logo" class="img-fluid" style="max-width: 120px;">
+                    <img src="./images/VM-Logo-white.png" alt="VM Logo" class="img-fluid" style="max-width: 120px;">
                 </div>
 
                 <!-- About -->
@@ -520,7 +511,7 @@
                 <div class="col-md-3 text-center text-md-start">
                     <h6 class="footer-title">Connect</h6>
                     <div class="d-flex gap-3 justify-content-center justify-content-md-start">
-                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
                         <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
@@ -531,7 +522,7 @@
             <hr class="border-light opacity-25 mt-5">
 
             <div class="text-center small text-muted pb-3 copy-right">
-                © 2025 VM Dashboard. Proudly powered by yourteam.
+                © 2025 VM Dashboard, Proudly powered by Fab Retail.
             </div>
         </div>
     </footer>
@@ -603,7 +594,24 @@
                 this.scrollIntoView({ behavior: 'smooth', inline: 'center' });
             });
         });
+
+
+        const toggler = document.querySelector('.navbar-toggler');
+        const collapseEl = document.getElementById('navbarNav');
+
+        collapseEl.addEventListener('shown.bs.collapse', () => {
+            toggler.querySelector('.icon-open').classList.add('d-none');
+            toggler.querySelector('.icon-close').classList.remove('d-none');
+        });
+
+        collapseEl.addEventListener('hidden.bs.collapse', () => {
+            toggler.querySelector('.icon-open').classList.remove('d-none');
+            toggler.querySelector('.icon-close').classList.add('d-none');
+        });
+
+
     </script>
+
 </body>
 
 </html>

@@ -16,10 +16,9 @@ p {
 }
 
 
-.clip-path{
+.clip-path {
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
 }
-
 
 
 /* ==========================
@@ -34,12 +33,12 @@ p {
   color: #f97316 !important;
 }
 
-.navbar-nav .nav-link:hover,
+/* .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
   color: #fff !important;
   background-color: #f97316 !important;
   border-radius: 5px;
-}
+} */
 
 @media (max-width: 767.98px) {
   .navbar-collapse {
@@ -126,7 +125,7 @@ p {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.social-card:hover {
+/* .social-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 24px rgba(249, 115, 22, 0.15);
 }
@@ -134,7 +133,7 @@ p {
 .shadow-orange:hover {
   box-shadow: 0 12px 32px rgba(249, 115, 22, 0.25);
   transform: translateY(-5px);
-}
+} */
 
 
 /* ==========================
@@ -145,7 +144,7 @@ p {
   background: #fff;
   text-align: center;
   overflow: hidden;
-  min-height: 390px;
+  min-height: 330px;
   transition: all 0.3s ease;
 }
 
@@ -192,7 +191,7 @@ p {
   color: white;
 }
 
-.omni-channel-slider .container ul{
+.omni-channel-slider .container ul {
   overflow: hidden !important;
 }
 
@@ -200,6 +199,23 @@ p {
   overflow-x: auto;
   white-space: nowrap;
   scroll-behavior: smooth;
+}
+
+.equal-image {
+  width: 100%;
+  max-width: 415px;
+  height: auto;
+  aspect-ratio: 415 / 296;
+  object-fit: cover;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 991.98px) {
+  .equal-image {
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
+  }
 }
 
 
@@ -285,9 +301,15 @@ p {
 }
 
 .custom-nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
   background-color: #f97316;
-  padding: 15px;
   border-radius: 50%;
+  color: white;
+  font-size: 14px;
 }
 
 
@@ -336,3 +358,43 @@ footer .copy-right {
 hr {
   border-color: rgba(255, 255, 255, 0.1);
 }
+
+footer .social-icon.facebook {
+  padding: 8px 12px !important;
+}
+
+
+
+/* -------------------- navigation bar */
+/* Style the nav collapse for mobile fullscreen overlay */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 80%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 2rem 1rem;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* min-height: 100vh; */
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .navbar-collapse .btn,
+  .navbar-collapse .fw-medium {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+}
+
+
