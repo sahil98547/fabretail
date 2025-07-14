@@ -18,11 +18,25 @@
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
+    <!-- FigTree google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Figtree&display=swap" rel="stylesheet">
+
     <!-- Custom Styles -->
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+
+    <!-- loader -->
+    <div id="loader"
+        class="d-flex flex-column justify-content-center align-items-center position-fixed top-0 start-0 w-100 h-100 bg-white"
+        style="z-index: 9999;">
+        <img src="./images/Loader.gif" alt="Logo" class="mb-4"
+            style="width: 100px; height: auto;">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-white">
@@ -79,14 +93,13 @@
 
                 <div
                     class="w-100 w-lg-auto d-flex flex-column flex-lg-row align-items-center justify-content-end gap-4 pt-3 pt-lg-0">
-                    <div class="fw-medium" style="color: #fd7e14;">Login</div>
+                    <div class="fw-medium" style="color: #000;">Login</div>
                     <button class="btn btn-outline-primary px-4 py-2 rounded-0">Start Free Trial</button>
-                    <button class="btn btn-primary px-4 py-2 rounded-0">Book A Demo</button>
+                    <button class="btn btn-primary px-4 py-2 rounded-0 book-demo">Book A Demo</button>
                 </div>
             </div>
         </div>
     </nav>
-
 
     <!-- Main Banner -->
     <section class="py-5 text-center main-banner-section banner-bg">
@@ -98,11 +111,11 @@
                 Unlock the Power of Consolidated Ticket Management and Analytics to Drive Customer Care and Marketing
                 Success
             </p>
-            <div class="d-flex justify-content-center gap-3 mt-4 flex-wrap py-2">
-                <a href="#" class="btn btn-primary px-4 py-2 px-5 rounded-0 clip-path">
-                    Book a Demo <i class="bi bi-arrow-up-right ms-2" style="color: white;"></i>
+            <div class="d-flex justify-content-center gap-3 mt-4 flex-wrap py-2 main-banner-section-btn">
+                <a href="#" class="btn btn-primary px-4 py-2 px-5 rounded-0 clip-path banner-demo-btn">
+                    Book a Demo <i class="bi bi-arrow-up-right ms-2"></i>
                 </a>
-                <a href="#" class="btn btn-light border px-5 py-2 rounded-0 clip-path">
+                <a href="#" class="btn btn-light border px-5 py-2 rounded-0 clip-path banner-watch-btn">
                     Watch Video <i class="bi bi-play-fill ms-2"></i>
                 </a>
             </div>
@@ -154,28 +167,38 @@
     <section class="py-5 bg-dark text-white omni-channel-slider mt-5">
         <div class="container">
             <!-- Tabs -->
-            <ul class="nav nav-pills justify-content-start mb-4 gap-2 flex-nowrap overflow-auto" id="featureTabs"
-                role="tablist" style="scroll-behavior: smooth; white-space: nowrap;">
+            <div class="w-100 overflow-auto">
+                <ul class="nav nav-pills d-flex flex-nowrap gap-2 justify-content-start mb-4 border-bottom border-1 border-white"
+                    role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="ticketing-tab" data-bs-toggle="pill"
+                            data-bs-target="#tab-ticketing" type="button" role="tab" aria-selected="true">
+                            Omni-Channel Ticketing
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="listening-tab" data-bs-toggle="pill"
+                            data-bs-target="#tab-listening" type="button" role="tab" aria-selected="false"
+                            tabindex="-1">
+                            Social Listening
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="ai-tab" data-bs-toggle="pill" data-bs-target="#tab-ai"
+                            type="button" role="tab" aria-selected="false" tabindex="-1">
+                            Social CRM
+                        </button>
+                    </li>
+                </ul>
+            </div>
 
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="ticketing-tab" data-bs-toggle="pill"
-                        data-bs-target="#tab-ticketing" type="button" role="tab">Omni-Channel Ticketing</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="listening-tab" data-bs-toggle="pill" data-bs-target="#tab-listening"
-                        type="button" role="tab">Social Listening</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="ai-tab" data-bs-toggle="pill" data-bs-target="#tab-ai" type="button"
-                        role="tab">Social CRM</button>
-                </li>
-            </ul>
 
             <!-- Tab Content -->
             <div class="tab-content" id="featureTabsContent">
 
                 <!-- Tab 1 -->
-                <div class="tab-pane fade show active" id="tab-ticketing" role="tabpanel">
+                <div class="tab-pane fade active show" id="tab-ticketing" role="tabpanel"
+                    aria-labelledby="ticketing-tab">
                     <div class="row align-items-center">
                         <div class="col-lg-4 text-lg-start text-center">
                             <h4 class="fw-bold">Evaluate Smarter</h4>
@@ -197,7 +220,7 @@
                 </div>
 
                 <!-- Tab 2 -->
-                <div class="tab-pane fade" id="tab-listening" role="tabpanel">
+                <div class="tab-pane fade" id="tab-listening" role="tabpanel" aria-labelledby="listening-tab">
                     <div class="row align-items-center">
                         <div class="col-lg-4 text-lg-start text-center">
                             <h4 class="fw-bold">Understand Trends</h4>
@@ -219,7 +242,7 @@
                 </div>
 
                 <!-- Tab 3 -->
-                <div class="tab-pane fade" id="tab-ai" role="tabpanel">
+                <div class="tab-pane fade" id="tab-ai" role="tabpanel" aria-labelledby="ai-tab">
                     <div class="row align-items-center">
                         <div class="col-lg-4 text-lg-start text-center">
                             <h4 class="fw-bold">AI-Powered Responses</h4>
@@ -244,7 +267,6 @@
         </div>
     </section>
 
-
     <!-- A Complete Social Suite (All in One) -->
 
     <section class="py-5 bg-light social-suite">
@@ -266,10 +288,10 @@
             <!-- Features Grid -->
             <div class="row g-4">
                 <!-- Social Listening -->
-                <div class="col-12 col-md-6">
-                    <div class="social-card p-4 bg-white shadow h-100 border-start border-5 border-orange rounded-3">
-                        <div class="d-flex align-items-start mb-3">
-                            <i class="bi bi-ear fs-3 me-3 text-orange"></i>
+                <div class="col-12 col-md-3">
+                    <div class="bg-white border-5 border-bottom border-orange h-100 p-4 shadow social-card">
+                        <div class="mb-3">
+                            <i class="bi bi-ear fs-3 text-orange"></i>
                             <h5 class="fw-bold mt-1 mb-0">Social Listening</h5>
                         </div>
                         <p class="text-muted mb-0">
@@ -281,9 +303,9 @@
                 </div>
 
                 <!-- Social Care -->
-                <div class="col-12 col-md-6">
-                    <div class="social-card p-4 bg-white shadow h-100 border-start border-5 border-orange rounded-3">
-                        <div class="d-flex align-items-start mb-3">
+                <div class="col-12 col-md-3">
+                    <div class="bg-white border-5 border-bottom border-orange h-100 p-4 shadow social-card">
+                        <div class="mb-3">
                             <i class="bi bi-chat-dots fs-3 me-3 text-orange"></i>
                             <h5 class="fw-bold mt-1 mb-0">Social Care</h5>
                         </div>
@@ -296,9 +318,9 @@
                 </div>
 
                 <!-- Social Analytics -->
-                <div class="col-12 col-md-6">
-                    <div class="social-card p-4 bg-white shadow h-100 border-start border-5 border-orange rounded-3">
-                        <div class="d-flex align-items-start mb-3">
+                <div class="col-12 col-md-3">
+                    <div class="bg-white border-5 border-bottom border-orange h-100 p-4 shadow social-card">
+                        <div class="mb-3">
                             <i class="bi bi-bar-chart-line fs-3 me-3 text-orange"></i>
                             <h5 class="fw-bold mt-1 mb-0">Social Analytics</h5>
                         </div>
@@ -310,9 +332,9 @@
                 </div>
 
                 <!-- Social Publishing -->
-                <div class="col-12 col-md-6">
-                    <div class="social-card p-4 bg-white shadow h-100 border-start border-5 border-orange rounded-3">
-                        <div class="d-flex align-items-start mb-3">
+                <div class="col-12 col-md-3">
+                    <div class="bg-white border-5 border-bottom border-orange h-100 p-4 shadow social-card">
+                        <div class="mb-3">
                             <i class="bi bi-share fs-3 me-3 text-orange"></i>
                             <h5 class="fw-bold mt-1 mb-0">Social Publishing</h5>
                         </div>
@@ -354,9 +376,9 @@
 
 
     <!-- Real Stories Section -->
-    <section class="py-5 bg-dark text-white text-center">
+    <section class="eal-story-section py-5 bg-dark text-white text-center">
         <div class="container">
-            <h3 class="fw-bold text-orange mb-4">
+            <h3 class="fw-bold text-orange mb-4" style="color: #fff !important;">
                 Real Stories. Real Success.
             </h3>
             <div class="divider mx-auto mb-4"></div>
@@ -463,7 +485,6 @@
             </div>
         </div>
     </section>
-
 
     <!-- Footer section -->
 
@@ -607,6 +628,14 @@
         collapseEl.addEventListener('hidden.bs.collapse', () => {
             toggler.querySelector('.icon-open').classList.remove('d-none');
             toggler.querySelector('.icon-close').classList.add('d-none');
+        });
+
+
+        // loader script
+        window.addEventListener("load", function () {
+            const loader = document.getElementById("loader");
+            loader.classList.add("hidden");
+            setTimeout(() => loader.style.display = "none", 400);
         });
 
 
